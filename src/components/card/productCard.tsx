@@ -11,8 +11,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { UseContext } from "../../context/context";
 import { CartItemType } from "../../context/context";
 import QuantityButtons from "../buttons/quantityButtons";
-import { useEffect, useState } from "react";
-import Link from "@mui/material/Link";
+import { useEffect } from "react";
 import Description from "../description/description";
 
 export default function ProductCard() {

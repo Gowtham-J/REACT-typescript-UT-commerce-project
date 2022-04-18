@@ -2,10 +2,7 @@ import { Button } from "@mui/material";
 // Types
 import { CartItemType } from "../../context/context";
 // Styles
-// import { Wrapper } from "./CartItem.styles";
 import Box from "@mui/material/Box";
-
-import QuantityButtons from "../buttons/quantityButtons";
 
 const ButtonStyle = {
   display: "flex",

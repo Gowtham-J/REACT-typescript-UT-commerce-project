@@ -19,11 +19,7 @@ type propType = {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-export default function Cart({
-  open,
-  setOpen,
-}: // handleClose,
-propType) {
+export default function Cart() {
   const { cartItem, getTotalItems } = UseContext();
 
   return (
@@ -35,7 +31,7 @@ propType) {
       >
         <ShoppingCartIcon />
       </StyledBadge>
-      <CartModal open={open} setOpen={setOpen} />
+      <CartModal />
     </>
   );
 }

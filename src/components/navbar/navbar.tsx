@@ -3,17 +3,11 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import Cart from "../cart/cart";
+import { CartModal } from "../cart/cartModal";
 
 const Navbar: React.FC = () => {
-  const [open, setOpen] = React.useState<boolean>(false);
-  const handleDrawer = (): void => {
-    setOpen(!open);
-  };
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -28,15 +22,9 @@ const Navbar: React.FC = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Products
           </Typography>
-          <Button
-            color="inherit"
-            data-testid="cart-button"
-            onClick={handleDrawer}
-          >
-            <Cart open={open} setOpen={setOpen} />
-          </Button>
+          <CartModal />
         </Toolbar>
       </AppBar>
     </Box>

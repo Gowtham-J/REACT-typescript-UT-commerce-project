@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-import { useEffect, useState } from "react";
 import { UseContext } from "../../context/context";
 import { CartItemType } from "../../context/context";
 const button = {

@@ -35,6 +35,7 @@ const ContextProvider: React.FC = ({ children }) => {
   const [product, setProduct] = useState([] as CartItemType[]);
   const [cartItem, setCartItem] = useState([] as CartItemType[]);
 
+  // =================== product adding to cart related functions
   const handleAddItem = (clickedItem: CartItemType): void => {
     setCartItem((prev: any[]) => {
       const isItemInCart = prev.find(
@@ -65,6 +66,7 @@ const ContextProvider: React.FC = ({ children }) => {
       }, [] as CartItemType[])
     );
   };
+  // ==================================================
 
   const getTotalItems = (items: CartItemType[]): number =>
     items.reduce((ack: number, item) => ack + item.amount, 0);
