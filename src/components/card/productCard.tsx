@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,10 +9,10 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
+// Components
 import { UseContext } from "../../context/context";
 import { CartItemType } from "../../context/context";
 import QuantityButtons from "../buttons/quantityButtons";
-import { useEffect } from "react";
 import Description from "../description/description";
 
 export default function ProductCard() {

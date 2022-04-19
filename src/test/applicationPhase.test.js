@@ -1,8 +1,8 @@
+import userEvent from "@testing-library/user-event";
 import RenderWithContext, {
   render,
   screen,
 } from "../test-utils/testing-context-setup-test";
-import userEvent from "@testing-library/user-event";
 import App from "../App";
 
 test("Testing the whole application flow", async () => {

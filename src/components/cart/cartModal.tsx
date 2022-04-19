@@ -1,17 +1,17 @@
 // @flow
 import * as React from "react";
-import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import CloseIcon from "@mui/icons-material/Close";
-import { CartItemType } from "../../context/context";
 import CartItem from "./cartItem";
-import { UseContext } from "../../context/context";
 import Button from "@mui/material/Button";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Cart from "./cart";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge, { BadgeProps } from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
+
+// Components
+import { UseContext } from "../../context/context";
+import { CartItemType } from "../../context/context";
 
 type Anchor = "right";
 

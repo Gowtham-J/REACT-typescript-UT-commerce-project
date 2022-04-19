@@ -1,5 +1,4 @@
-import { screen, render, fireEvent } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { screen, fireEvent } from "@testing-library/react";
 import ProductCard from "../productCard";
 import RenderWithContext from "../../../test-utils/testing-context-setup-test";
 

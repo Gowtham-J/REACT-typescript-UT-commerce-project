@@ -1,9 +1,9 @@
+import userEvent from "@testing-library/user-event";
 import RenderWithContext, {
   screen,
   waitFor,
 } from "../../../test-utils/testing-context-setup-test";
 import { CartModal } from "../cartModal";
-import userEvent from "@testing-library/user-event";
 
 test("Rendering modal component", async () => {
   RenderWithContext(<CartModal />);

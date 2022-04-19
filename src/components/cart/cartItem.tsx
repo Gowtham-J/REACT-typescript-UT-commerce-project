@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
+import Box from "@mui/material/Box";
 // Types
 import { CartItemType } from "../../context/context";
 // Styles
-import Box from "@mui/material/Box";
+import QuantityButtons from "../buttons/quantityButtons";
 
 const ButtonStyle = {
   display: "flex",
@@ -33,26 +33,7 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
           <p>Price: ${item.price}</p>
           <p>Total: ${(item.amount * item.price).toFixed(2)}</p>
         </div>
-        {/* <QuantityButtons item={item} /> */}
-        <div className="buttons" style={ButtonStyle}>
-          <Button
-            size="small"
-            disableElevation
-            variant="contained"
-            onClick={() => removeFromCart(item.id)}
-          >
-            -
-          </Button>
-          <p data-testid="amount">{item.amount}</p>
-          <Button
-            size="small"
-            disableElevation
-            variant="contained"
-            onClick={() => addToCart(item)}
-          >
-            +
-          </Button>
-        </div>
+        <QuantityButtons element={item} />
       </div>
       <img
         style={{ maxWidth: "80px", objectFit: "cover", marginLeft: "40px" }}
