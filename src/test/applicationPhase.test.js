@@ -1,5 +1,7 @@
-import RenderWithContext from "../test-utils/testing-context-setup-test";
-import { fireEvent, render, screen } from "@testing-library/react";
+import RenderWithContext, {
+  render,
+  screen,
+} from "../test-utils/testing-context-setup-test";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 

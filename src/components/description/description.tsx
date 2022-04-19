@@ -12,7 +12,7 @@ function Description({ children, count }: { children: string; count: number }) {
 
   return (
     <div>
-      {resultString}
+      <div data-testid="description-data">{resultString}</div>
       <Link sx={{ height: "10px" }}>
         {text.length > count ? (
           <span onClick={toggleShow}> {show ? "read more" : "read less"}</span>

@@ -1,6 +1,6 @@
-import { screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import RenderWithContext from "../../../test-utils/testing-context-setup-test";
+import RenderWithContext, {
+  screen,
+} from "../../../test-utils/testing-context-setup-test";
 import CartItem from "../cartItem";
 
 const itemContent = {

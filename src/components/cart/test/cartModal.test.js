@@ -1,19 +1,26 @@
-import { React } from "react";
-import { fireEvent, screen } from "@testing-library/react";
-import RenderWithContext from "../../../test-utils/testing-context-setup-test";
+import RenderWithContext, {
+  screen,
+  waitFor,
+} from "../../../test-utils/testing-context-setup-test";
 import { CartModal } from "../cartModal";
-import ProductCard from "../../card/productCard";
+import userEvent from "@testing-library/user-event";
 
 test("Rendering modal component", async () => {
-  RenderWithContext(<CartModal open={true} />);
+  RenderWithContext(<CartModal />);
 
+  const cartButton = screen.getByTestId("cart-button");
+  userEvent.click(cartButton);
   const openModal = screen.getByText(/Your Shopping Cart/i);
   expect(openModal).toBeTruthy();
 
   const getEmptyCartText = screen.getByText(/No items in cart/);
   expect(getEmptyCartText).toBeInTheDocument();
 
-  RenderWithContext(<ProductCard />);
+  const closeButton = screen.getByTestId("close-button");
+  userEvent.click(closeButton);
 
-  screen.getByText(/No items in cart/);
+  await waitFor(() => {
+    const modalText = screen.queryByText(/Your Shopping Cart/i);
+    expect(modalText).not.toBeInTheDocument();
+  });
 });

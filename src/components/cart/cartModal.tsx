@@ -55,7 +55,11 @@ export const CartModal = () => {
 
   return (
     <React.Fragment key={anchor}>
-      <Button color="inherit" onClick={toggleDrawer(anchor, true)}>
+      <Button
+        data-testid="cart-button"
+        color="inherit"
+        onClick={toggleDrawer(anchor, true)}
+      >
         <StyledBadge
           data-testid="badge-icon"
           badgeContent={getTotalItems(cartItem)}

@@ -14,11 +14,6 @@ const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
   },
 }));
 
-type propType = {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
 export default function Cart() {
   const { cartItem, getTotalItems } = UseContext();
 
