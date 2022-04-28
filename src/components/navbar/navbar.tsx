@@ -6,12 +6,14 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import { CartModal } from "../cart/cartModal";
+import Dropdown from "../dropdown.tsx/dropdown";
 
 const Navbar: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
+          <Dropdown />
           <IconButton
             size="large"
             edge="start"

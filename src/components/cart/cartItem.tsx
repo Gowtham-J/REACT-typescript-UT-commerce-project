@@ -4,11 +4,6 @@ import { CartItemType } from "../../context/context";
 // Styles
 import QuantityButtons from "../buttons/quantityButtons";
 
-const ButtonStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-};
-
 const boxStyles = {
   display: "flex",
   justifyContent: "space-between",
@@ -24,22 +19,28 @@ type Props = {
   removeFromCart: (id: number) => void;
 };
 
-const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
+const CartItem: React.FC<Props> = ({ item }) => {
   return (
     <Box sx={boxStyles}>
-      <div style={{ flex: 1 }}>
-        <h3 data-testid="item-title">{item.title}</h3>
-        <div className="information" style={ButtonStyle}>
-          <p>Price: ${item.price}</p>
-          <p>Total: ${(item.amount * item.price).toFixed(2)}</p>
-        </div>
-        <QuantityButtons element={item} />
-      </div>
       <img
-        style={{ maxWidth: "80px", objectFit: "cover", marginLeft: "40px" }}
+        style={{
+          width: "100px",
+          height: "100px",
+          objectFit: "cover",
+          marginRight: "40px",
+          border: "2px solid #1976d2",
+          borderRadius: "10px",
+          marginTop: "40px",
+        }}
         src={item.image}
         alt={item.title}
       />
+      <div style={{ flex: 1 }}>
+        <h3 data-testid="item-title">{item.title}</h3>
+        <p>Price: ${item.price}</p>
+        <QuantityButtons element={item} />
+        <p>Total: ${(item.amount * item.price).toFixed(2)}</p>
+      </div>
     </Box>
   );
 };
